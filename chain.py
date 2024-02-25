@@ -8,7 +8,7 @@ from langchain.chains import ConversationalRetrievalChain
 
 
 def chatbot_chain():
-    loader = PyPDFLoader(file_path="SQL-Interview-Book.pdf.pdf")
+    loader = PyPDFLoader(file_path="SQL-Interview-Book.pdf")
     documents = loader.load()
     vectorstore = FAISS.from_documents(documents, OpenAIEmbeddings())
     memory = ConversationBufferMemory(memory_key='chat_history', return_messages=True)
