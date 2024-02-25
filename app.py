@@ -5,7 +5,7 @@ chain = chatbot_chain()
 
 st.title("SQL Question Answering bot")
 
-bot_logo_path = "logo.png"
+bot_logo_path = "bot.png"
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = [{"role": "bot",
